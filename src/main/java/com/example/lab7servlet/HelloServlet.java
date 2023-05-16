@@ -103,10 +103,7 @@ public class HelloServlet extends HttpServlet {
             else {
                 out.println("Поровну. "+Integer.toString(result[0])+ "==" + Integer.toString(result[1]));
             }
-////            out.println("<h" + HelloServlet.cycle + ">" +
-//                    "<tr>" + "<td>" + "Sum of odd numbers: " + result[0] +
-//                    " Sum of even numbers: " + result[1] + "</td>" + "</tr>" +
-//                    "</table></h" + HelloServlet.cycle + ">");
+
             out.println("</body>");
             out.println("</html>");
         }
