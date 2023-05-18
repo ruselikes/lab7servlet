@@ -48,23 +48,23 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 
 <h1>Главная страница </h1>
 <h3>Введите данные для функции через пробел</h3>
-<form name="Input form" action="jsp_2.jsp">
+<form name="Input form" action="jsp_3.jsp">
     <input type="text" name="data" id="inputdata"/>
     <input type="submit" value="OK" name="button1" />
     <%mybean.addCounter(1);%>
     <h1>${mybean.counter}</h1>
 </form>
-<script>
+<%--<script>--%>
 
-        let params = document.getElementById("inputdata").value;
-        if(params !== "")
-        {
-            let url = 'finish.jsp?total='+params;
-            window.location.href = url;
-        }
+<%--        let params = document.getElementById("inputdata").value;--%>
+<%--        if(params !== "")--%>
+<%--        {--%>
+<%--            let url = 'finish.jsp?total='+params;--%>
+<%--            window.location.href = url;--%>
+<%--        }--%>
 
-</script>
+<%--</script>--%>
 <%--<a href="jsp_3.jsp?pArray=${params.value}">Получить данные</a>--%>
-<a href="jsp_3.jsp?pArray=5&pArray=2">Получить данные</a>
+<%--<a href="jsp_3.jsp?pArray=5&pArray=2">Получить данные</a>--%>
 </body>
 </html>

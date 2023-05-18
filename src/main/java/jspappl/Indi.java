@@ -39,13 +39,13 @@ public class Indi {
             }
         }
         if (Even > Odd){
-            return "<tr><td><h2>Четных больше."+Integer.toString(Even) + " > " + Integer.toString(Odd)+ "</h2></tr></td>";
+            return "Четных больше."+Integer.toString(Even) + " > " + Integer.toString(Odd);
         }
         else if (Even < Odd) {
-            return "<tr><td><h2>Нечетных больше. "+Integer.toString(Odd) + " > " + Integer.toString(Even)+"</tr></td></h2>";
+            return "Нечетных больше. "+Integer.toString(Odd) + " > " + Integer.toString(Even);
         }
         else {
-            return "<tr><td><h2>Поровну. "+Integer.toString(Even)+ "==" + Integer.toString(Odd)+"</tr></td><h2>";
+            return "Поровну. "+Integer.toString(Even)+ "==" + Integer.toString(Odd);
         }
 
 

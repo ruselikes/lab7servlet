@@ -1,6 +1,23 @@
+<%
+    String data = request.getParameter("data");
+    String[] numbers = new String[0];
+    if (data != null) {
+        // Разбиваем строку на отдельные числа, используя пробел в качестве разделителя
 
+        numbers = data.split(" ");
+//        // Обрабатываем каждое число
+//        for (String number : numbers) {
+//            // Преобразуем число из строки в целое число
+//            int value = Integer.parseInt(number);
+//
+//            // Далее вы можете выполнить нужные операции с каждым числом
+//            // ...
+//        }
+    }
+%>
 <%@page contentType="text/html"%>
 <%@page pageEncoding="UTF-8"%>
+
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!DOCTYPE html
@@ -22,12 +39,29 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 
 </table>
 <table id="results" border="1px solid black">
-  <tr>
-    <td>Четных чисел: ${Indi.getCountEven()}</td>
-    <td>Сумма нечетных чисел: ${Indi.getCountOdd()}</td>
-    <td><%=indi.CompareOddEvenQty(request.getParameterValues("pArray"))%></td>
-  </tr>
-
+<%--  <tr>--%>
+<%--    <td>Четных чисел: ${Indi.getCountEven()}</td>--%>
+<%--    <td>Сумма нечетных чисел: ${Indi.getCountOdd()}</td>--%>
+    <tr>
+<%--    <td colspan="2"><%=indi.CompareOddEvenQty(request.getParameterValues("pArray"))%></td>--%>
+    <td colspan="2"><%=indi.CompareOddEvenQty(numbers)%></td>
+    </tr>
+    <tr>
+        <td>Четных:<%=indi.getCountEven()%></td>
+        <td>Нечетных: <%=indi.getCountOdd()%></td>
+    </tr>
+<%--  </tr>--%>
+<%--    <tr>--%>
+<%--        <td colspan="2">--%>
+<%--            <% if (numbers != null) {--%>
+<%--                for (String number : numbers) {--%>
+<%--            %>--%>
+<%--            <%= number %><br>--%>
+<%--            <%--%>
+<%--                    }--%>
+<%--                } %>--%>
+<%--        </td>--%>
+<%--    </tr>--%>
 
 </table>
 <a href="jsp_2.jsp">Главная страница</a>
